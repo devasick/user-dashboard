@@ -1,8 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Header from "./Components/Header";
+import './Common/Style.scss';  
+import Footer from "./Components/Footer";
+
+
 import * as serviceWorker from './serviceWorker';
+
+function App() {
+  return (
+
+     <React.Fragment>
+        <Header/>
+        <Footer/>
+        
+       </React.Fragment> 
+  );
+}
+
+export default App;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

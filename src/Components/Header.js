@@ -19,7 +19,6 @@ import logo from '../Common/images/logo.png'
 
 
 class Header extends Component {
-  
 
   
   render() {

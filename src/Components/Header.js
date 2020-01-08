@@ -8,6 +8,8 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBell,faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import Dashboard from "./Dashboard";
 import Settings from "./Settings";
 import Profile from "./Profile";
@@ -28,15 +30,36 @@ class Header extends Component {
      
       <Router>
       <header>
+      <div class="topnav">
+      <a className="logo" href="#home"><img src={logo} alt={"logo"}/> </a>
+
+      <div class="topnav-right">
+      <a href="#search"><FontAwesomeIcon icon={faBell} /></a>
+      <a href="#about"><FontAwesomeIcon icon={faEnvelope} /></a>
+      </div>
+      </div>
+      </header>
+      {/* <header>
       <ul>
       <li><a className="logo" href="#home"><img src={logo} alt={"logo"}/> </a></li>
       </ul>
-        </header> 
+      <ul>
+        <li>Notifivation</li>
+      </ul>
+        </header>  */}
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-        <Router basename={'/user-dashboard'}>
+        <Router basename={'/'}>
         <Route exact path="/">
+        <div className="container">
+        <div className="row">
+        <LeftNav/>
+        <Dashboard/>
+        </div>
+        </div>
+        </Route>
+        <Route exact path="/dashboard">
         <div className="container">
         <div className="row">
         <LeftNav/>
@@ -48,7 +71,9 @@ class Header extends Component {
             <div className="container">
             <div className="row">
             <LeftNav/>
+            <div className="col-8 dashboard-cls">  
             <Settings />
+            </div>
             </div>
             </div>
         </Route>

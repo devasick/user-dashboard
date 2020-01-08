@@ -4,8 +4,6 @@ import 'react-tabs/style/react-tabs.css';
 import Settings from "./Settings";
 import Profile from "./Profile";
 
-
-
 export default class Dashboard extends Component {
     render() {
         return (

@@ -18,21 +18,22 @@ import logo from '../Common/images/logo.png'
 
 
 
+
+
+
 class Header extends Component {
 
   
   render() {
-   // const { items } = this.state;
-    
  
     return (
      
       <Router>
       <header>
-      <div class="topnav">
+      <div className="topnav">
       <a className="logo" href="#home"><img src={logo} alt={"logo"}/> </a>
 
-      <div class="topnav-right">
+      <div className="topnav-right">
       <a href="#search"><FontAwesomeIcon icon={faBell} /></a>
       <a href="#about"><FontAwesomeIcon icon={faEnvelope} /></a>
       </div>
@@ -62,7 +63,6 @@ class Header extends Component {
         <div className="container">
         <div className="row">
         <LeftNav/>
-        <Dashboard/>
         </div>
         </div>
         </Route>

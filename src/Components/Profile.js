@@ -28,6 +28,7 @@ export default class Profile extends Component {
           firstName: '',
           lastName: '',
           address: '',
+          country:''
 
         }}
         validationSchema={Yup.object().shape({
@@ -45,13 +46,14 @@ export default class Profile extends Component {
       })}
       onSubmit={(values, actions) => {
       
-        actions.setStatus(undefined);  
+         
         setTimeout(() => { 
           actions.setStatus({
             successMsg: 'Profile has been added successfully.',
           });
-        }, 100);
+        }, 500);
         actions.resetForm();
+        
         
       }}
       

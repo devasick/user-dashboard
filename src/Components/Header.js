@@ -57,7 +57,7 @@ class Header extends Component {
             <div className="container">
             <div className="row">
             <LeftNav/>
-            <div className="col-8 dashboard-cls"> 
+            <div className="col-8 white-box"> 
             <h3>Setting</h3>
             <Settings />
             </div>
@@ -68,7 +68,7 @@ class Header extends Component {
            <div className="container">
            <div className="row">
             <LeftNav/>
-            <div className="col-8 dashboard-cls">  
+            <div className="col-8 white-box">  
             <h3>Profile</h3>
             <Profile/>
             </div>

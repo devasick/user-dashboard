@@ -18,7 +18,7 @@ export default class Settings extends Component {
     const handleChange = (event,setFieldValue) => {
       console.log(event.target.value)
       this.setState({[event.target.name]: event.target.value})
-      setFieldValue('password', event.target.value); // current password to password field 
+      setFieldValue('password', event.target.value); // data to password field for valitation
       
     }
     return (
@@ -45,15 +45,29 @@ export default class Settings extends Component {
                 .oneOf([Yup.ref('password'), null], 'Passwords must match')
                 .required('Confirm Password is required')
         })}
-        onSubmit={fields => {
+        onSubmit={(values, actions) => {
             
-            alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
+          setTimeout(() => { 
+            actions.setStatus({
+              successMsg: 'Setting has been saved successfully.',
+            });
+          }, 100);
+          actions.resetForm();
             
         }}
          
         >
-          {({ errors, touched, validateField, validateForm,props,setFieldValue }) => (
-            <Form>
+          {({ errors, touched, validateField, validateForm,props,setFieldValue,status }) => (
+                  <Form>
+                      <div className="row">
+                      <div className="col-12">
+                      {status && status.successMsg ? (
+                      <div className="success-msg"> {status.successMsg}</div>
+                      ) : (
+                      errors.successMsg && <div>{errors.successMsg}</div>
+                      )}
+                      </div>
+                      </div>
                       <div className="row">
                       <div className="col-12">
                             <label htmlFor="email">Email</label>

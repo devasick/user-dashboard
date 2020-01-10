@@ -30,7 +30,7 @@ The form also needs a button to submit the information through a fake AJAX call.
 It is important that the user receives feedback if his input is incorrect, correct, his data has not been saved and his data has been successfully saved.
 
 The layout also contains a header and a sidebar, which are not functioning in this test.
-### git clone 
+### Git Clone 
 
 Download or Clone : git clone https://github.com/devasick/user-dashboard/
 

@@ -35,6 +35,11 @@ The layout also contains a header and a sidebar, which are not functioning in th
 
 Download or Clone : git clone https://github.com/devasick/user-dashboard/
 
+### `npm install`
+
+Change to user-dashboard folder and install NPM command: npm install
+
+
 ### `npm start`
 
 Runs the app in the development mode.<br />

@@ -29,14 +29,14 @@ class Header extends Component {
       <a className="logo" href="https://innoloft.com/" target="_blank"><img src={logo} alt={"logo"}/> </a>
 
       <div className="topnav-right">
-      <a href="#search"><FontAwesomeIcon icon={faBell} /></a>
+      <a href="#search"><FontAwesomeIcon icon={faBell} className="bell" /></a>
       <a href="#about"><FontAwesomeIcon icon={faEnvelope} /></a>
       </div>
       </div>
       </header>
      
         <Switch>
-        <Router basename={'/'}>
+        <Router basename={'/user-dashboard'}>
         <Route exact path="/">
         <div className="container">
         <div className="row">

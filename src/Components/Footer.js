@@ -16,8 +16,7 @@ function Footer() {
           <p className="grey-text text-lighten-4">
           We've already come a long way. Innoloft can look back on four years of company history. Originally started to digitize the research transfer of the RWTH Aachen University, this idea has now developed into the leading B2B innovation network. The drive to accelerate the implementation of innovations in technology-driven industries through radically improved data transparency has always remained.
          </p>
-         <p>We've already come a long way. Innoloft can look back on four years of company history. Originally started to digitize the research transfer of the RWTH Aachen University, this idea has now developed into the leading B2B innovation network. The drive to accelerate the implementation of innovations in technology-driven industries through radically improved data transparency has always remained.
-         </p>
+         <p>Under the guise of this project, we have continuously developed from a database into a business network, which today already networks several thousand users and initiates cooperations. Despite all the technological development, Innoloft has been focusing on sustainable, environmentally friendly innovations from day one. Today, Innoloft is committed to a sustainable development in many areas, be it through its own format #startupsforfuture, the LoftgoesGreen project or numerous sustainable innovation projects together with partners.</p>
         </div>
         <div className="col-4 social-icon">
           <h5 className="white-text">Social Media</h5>

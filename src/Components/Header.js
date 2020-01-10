@@ -1,6 +1,5 @@
 // Author: Asick Ahamed
 import React, { Component } from 'react';
-//import axios from 'axios';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,10 +16,6 @@ import LeftNav from "./LeftNav";
 import logo from '../Common/images/logo.png' 
 
 
-
-
-
-
 class Header extends Component {
 
   
@@ -31,7 +26,7 @@ class Header extends Component {
       <Router>
       <header>
       <div className="topnav">
-      <a className="logo" href="#home"><img src={logo} alt={"logo"}/> </a>
+      <a className="logo" href="https://innoloft.com/" target="_blank"><img src={logo} alt={"logo"}/> </a>
 
       <div className="topnav-right">
       <a href="#search"><FontAwesomeIcon icon={faBell} /></a>
@@ -39,16 +34,7 @@ class Header extends Component {
       </div>
       </div>
       </header>
-      {/* <header>
-      <ul>
-      <li><a className="logo" href="#home"><img src={logo} alt={"logo"}/> </a></li>
-      </ul>
-      <ul>
-        <li>Notifivation</li>
-      </ul>
-        </header>  */}
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+     
         <Switch>
         <Router basename={'/'}>
         <Route exact path="/">
@@ -63,6 +49,7 @@ class Header extends Component {
         <div className="container">
         <div className="row">
         <LeftNav/>
+        <Dashboard/>
         </div>
         </div>
         </Route>
@@ -70,7 +57,8 @@ class Header extends Component {
             <div className="container">
             <div className="row">
             <LeftNav/>
-            <div className="col-8 dashboard-cls">  
+            <div className="col-8 dashboard-cls"> 
+            <h3>Setting</h3>
             <Settings />
             </div>
             </div>
@@ -78,8 +66,13 @@ class Header extends Component {
         </Route>
         <Route  path="/profile">
            <div className="container">
+           <div className="row">
             <LeftNav/>
-            <Profile />
+            <div className="col-8 dashboard-cls">  
+            <h3>Profile</h3>
+            <Profile/>
+            </div>
+           </div>
            </div>
         </Route>
         </Router>
@@ -92,4 +85,3 @@ class Header extends Component {
 }
 
 export default Header;
-

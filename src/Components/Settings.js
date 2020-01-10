@@ -15,9 +15,10 @@ export default class Settings extends Component {
   }
 
   render() {
-    const handleChange = event => {
+    const handleChange = (event,setFieldValue) => {
       console.log(event.target.value)
       this.setState({[event.target.name]: event.target.value})
+      setFieldValue('password', event.target.value); // current password to password field 
       
     }
     return (
@@ -47,10 +48,11 @@ export default class Settings extends Component {
         onSubmit={fields => {
             
             alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
+            
         }}
          
         >
-          {({ errors, touched, validateField, validateForm,props }) => (
+          {({ errors, touched, validateField, validateForm,props,setFieldValue }) => (
             <Form>
                       <div className="row">
                       <div className="col-12">
@@ -62,7 +64,9 @@ export default class Settings extends Component {
                         <div className="row">
                         <div className="col-12">
                             <label htmlFor="password">Password</label>
-                            <Field name="password" type="password" value={ this.state.password } onChange={handleChange} className={'form-field' + (errors.password && touched.password ? ' is-invalid' : '')} placeholder="Password" />
+                            <Field name="password" type="password" value={ this.state.password } onChange={data =>handleChange(data,setFieldValue)} 
+                               
+                            className={'form-field' + (errors.password && touched.password ? ' is-invalid' : '')} placeholder="Password" />
                             <PasswordStrengthBar password={this.state.password}  />
                             <ErrorMessage name="password" component="div" className="invalid-feedback" />
                         </div>
@@ -70,7 +74,7 @@ export default class Settings extends Component {
                         <div className="row">
                         <div className="col-12">
                             <label htmlFor="confirmPassword">Confirm Password</label>
-                            <Field name="confirmPassword" type="password" value={ this.state.confirmPassword } onChange={handleChange} className={'form-field' + (errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} placeholder="Confirm Password" />
+                            <Field name="confirmPassword" type="password" value={ this.state.confirmPassword }  className={'form-field' + (errors.confirmPassword && touched.confirmPassword ? ' is-invalid' : '')} placeholder="Confirm Password" />
                             <ErrorMessage name="confirmPassword" component="div" className="invalid-feedback" />
                         </div>
                         </div>

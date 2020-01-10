@@ -403,6 +403,12 @@ header {
   display: inline;
   content: "⚠ ";
   }
+  div.success-msg{
+    color: green;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
 }
 
 footer.page-footer {

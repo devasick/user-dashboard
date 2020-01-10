@@ -10,7 +10,9 @@ function Footer() {
     <div className="container">
       <div className="row">
         <div className="col-8">
+          <a href="https://innoloft.com/" target="_blank">
           <img src="https://innoloft.com/public/wp-content/uploads/2019/09/logo_innoloft_white.png" />
+          </a>
           <p className="grey-text text-lighten-4">
           We've already come a long way. Innoloft can look back on four years of company history. Originally started to digitize the research transfer of the RWTH Aachen University, this idea has now developed into the leading B2B innovation network. The drive to accelerate the implementation of innovations in technology-driven industries through radically improved data transparency has always remained.
          </p>
@@ -39,7 +41,7 @@ function Footer() {
     </div>
     <div className="footer-copyright">
       <div className="container">
-      © 2019 Copyright www.asickweb.com
+      © 2020 Copyright <a href="https://innoloft.com/">www.Innoloft.com</a>
       </div>
     </div>
   </footer>

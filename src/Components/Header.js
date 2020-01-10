@@ -25,57 +25,55 @@ class Header extends Component {
      
       <Router>
       <header>
-      <div className="topnav">
-      <a className="logo" href="https://innoloft.com/" target="_blank"><img src={logo} alt={"logo"}/> </a>
-
-      <div className="topnav-right">
-      <a href="#search"><FontAwesomeIcon icon={faBell} className="bell" /></a>
-      <a href="#about"><FontAwesomeIcon icon={faEnvelope} /></a>
-      </div>
-      </div>
+        <div className="topnav">
+            <a className="logo" href="https://innoloft.com/" target="_blank"><img src={logo} alt={"logo"}/> </a>
+          <div className="topnav-right">
+            <a href="#search"><FontAwesomeIcon icon={faBell} className="bell" /></a>
+            <a href="#about"><FontAwesomeIcon icon={faEnvelope} /></a>
+          </div>
+        </div>
       </header>
-     
         <Switch>
-        <Router basename={'/user-dashboard'}>
-        <Route exact path="/">
-        <div className="container">
-        <div className="row">
-        <LeftNav/>
-        <Dashboard/>
-        </div>
-        </div>
-        </Route>
-        <Route exact path="/dashboard">
-        <div className="container">
-        <div className="row">
-        <LeftNav/>
-        <Dashboard/>
-        </div>
-        </div>
-        </Route>
-          <Route  path="/settings">
-            <div className="container">
-            <div className="row">
-            <LeftNav/>
-            <div className="col-8 white-box"> 
-            <h3>Setting</h3>
-            <Settings />
-            </div>
-            </div>
-            </div>
-        </Route>
-        <Route  path="/profile">
-           <div className="container">
-           <div className="row">
-            <LeftNav/>
-            <div className="col-8 white-box">  
-            <h3>Profile</h3>
-            <Profile/>
-            </div>
-           </div>
-           </div>
-        </Route>
-        </Router>
+          <Router basename={'/user-dashboard'}>
+              <Route exact path="/">
+              <div className="container">
+              <div className="row">
+              <LeftNav/>
+              <Dashboard/>
+              </div>
+              </div>
+              </Route>
+              <Route exact path="/dashboard">
+                <div className="container">
+                  <div className="row">
+                    <LeftNav/>
+                    <Dashboard/>
+                  </div>
+              </div>
+              </Route>
+              <Route  path="/settings">
+                <div className="container">
+                  <div className="row">
+                    <LeftNav/>
+                    <div className="col-8 white-box"> 
+                    <h3>Setting</h3>
+                    <Settings />
+                    </div>
+                  </div>
+                </div>
+              </Route>
+              <Route  path="/profile">
+                <div className="container">
+                    <div className="row">
+                        <LeftNav/>
+                        <div className="col-8 white-box">  
+                        <h3>Profile</h3>
+                        <Profile/>
+                        </div>
+                  </div>
+                </div>
+              </Route>
+          </Router>
         </Switch>
       
     </Router>

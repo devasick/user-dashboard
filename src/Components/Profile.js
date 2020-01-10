@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Formik, Form, Field,ErrorMessage } from 'formik';
-import PasswordStrengthBar from 'react-password-strength-bar';
 import * as Yup from 'yup';
 
 export default class Profile extends Component {
@@ -12,7 +11,6 @@ export default class Profile extends Component {
         lastName:'',
         address:'',
         country:'',
-        message:''
     }      
   }
   render() {

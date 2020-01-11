@@ -81,7 +81,8 @@ export default class Settings extends Component {
                             <Field name="password" type="password" value={ this.state.password } onChange={data =>handleChange(data,setFieldValue)} 
                                
                             className={'form-field' + (errors.password && touched.password ? ' is-invalid' : '')} placeholder="Password" />
-                            <PasswordStrengthBar password={this.state.password}  />
+                            {this.state.password ? <PasswordStrengthBar password={this.state.password}  /> : null}
+                            
                             <ErrorMessage name="password" component="div" className="invalid-feedback" />
                         </div>
                         </div>
